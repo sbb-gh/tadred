@@ -1,0 +1,21 @@
+[project]
+name = "TADRED"
+version = "1.0.0"
+dependencies = [
+    "numpy",
+    "torch==2.0.0",
+    "torchvision==0.15.1",
+    "torchaudio==2.0.1",
+    "pyyaml",
+    "hydra-core==1.3",
+]
+
+[project.scripts]
+train_eval__tadred = "tadred.tadred_main:train_and_eval"
+run = "tadred.tadred_main:run"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm[toml]>=6.2", "wheel"]
+
+[tool.setuptools.packages.find]
+include = ["tadred*"]
