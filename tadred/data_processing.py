@@ -33,8 +33,8 @@ def load_data(data_fil: str) -> dict:
     if data_fil_path.suffix == ".pkl":
         with open(data_fil_path, "rb") as f:
             data_dict = pickle.load(f)
-    # elif data_fil_path.suffix == ".npy":
-    #    data_dict = np.load(data_fil_path, allow_pickle=True).item()
+    elif data_fil_path.suffix == ".npy":
+        data_dict = np.load(data_fil_path, allow_pickle=True).item()
     else:
         raise ValueError("Data file either .pkl or .npy")
     return data_dict

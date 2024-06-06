@@ -44,7 +44,7 @@ def create_out_dirs(
         out_base_dir.mkdir(parents=True, exist_ok=True)
         log.info("Output base directory:", out_base_dir)
         results_dir = Path(out_base_dir, "results")
-        out_base_dir.mkdir(parents=True, exist_ok=True)
+        results_dir.mkdir(parents=True, exist_ok=True)
         log.info("Output results directory:", out_base_dir)
         results_fn = Path(results_dir, run_name + "_all.npy")
 
